@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+:root{
+    --my-padding: 0.4rem;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.conteiner {
+    
+    color: white;
+    display: grid;
+    font-family: 'DM Serif Display', serif;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.5fr 2fr 1fr 1fr 0.7fr;
+    grid-template-areas: 
+    "Header Menu"
+    "Hero Hero"
+    "main Image"
+    "main Extra"
+    "banner banner"
+    ;
+    height: 100vh;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+Header {
+    align-items: center;
+    display: grid;
+    background-color: cadetblue;
+    grid-area: Header;
+    padding: var(--my-padding);
+}
+
+.Hero{
+    align-items: center;
+    display: grid;
+    background-color: tomato;
+    grid-area: Hero;
+    padding: var(--my-padding);
+}
+.Menu{
+    align-items: center;
+    display: grid;
+    background-color: violet;
+    grid-area: Menu;
+    padding: var(--my-padding);
+}
+
+.Image{
+    align-items: center;
+    display: grid;
+    background-color: green;
+    grid-area: Image;
+    padding: var(--my-padding);
+}
+
+.Extra{
+    align-items: center;
+    display: grid;
+    background-color: aqua;
+    grid-area: Extra;
+    padding: var(--my-padding);
+}
+
+main{
+    align-items: center;
+    display: grid;
+    background-color: royalblue;
+    grid-area: main;
+    padding: var(--my-padding);
+}
+
+.banner{
+    align-items: center;
+    display: grid;
+    background-color: rgb(212, 212, 129);
+    grid-area: banner;
+    padding: var(--my-padding);
+}
+
+@media (max-width: 1024px) {
+    .conteiner{
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 0.5fr 2.5fr 2.5fr 1fr 1fr;
+        grid-template-areas:
+        "Header Header Header" 
+        "Hero Hero Hero"
+        "Menu main main"
+        "Menu banner banner"
+        "Menu Extra Image"
+        ;
+
+    }
+}
+
+@media (max-width: 480px) {
+    .conteiner{
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.5fr 0.5fr 2fr 2.5fr 1fr 1fr 1fr;
+        grid-template-areas:
+        "Header"
+        "Menu"
+        "Hero"
+        "main"
+        "banner"
+        "Extra"
+        "Image";
+
+    }
+
+}
